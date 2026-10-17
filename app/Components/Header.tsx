@@ -1,0 +1,14 @@
+export default function Header({text}: {text: string}) {
+    return (
+        <div className=" flex items-center justify-center md:justify-left rounded-lg">
+            <div>
+                <h1 className="text-4xl mb-3 font-semibold">{text}</h1>
+                <div className="flex mb-6 items-center justify-center">
+                    <div className="bg-foreground h-0.5 w-16"/>
+                    <div className="md:visible hidden flex-1"/>
+
+                </div>
+            </div>
+        </div>
+    )
+}
