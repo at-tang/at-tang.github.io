@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Aidan Tang",
   description: "Aidan Tang's portfolio website",
   icons: {
-    icon: "icon.png"
+    icon: "/icon.png"
   }
 };
 
