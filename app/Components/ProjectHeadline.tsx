@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import Button from "./Button"
 import ProjectButtonLink from "./ProjectButtonLink"
 
 
@@ -19,14 +18,8 @@ export default function ProjectHeadline({title, subtitle, description, image, gi
     const imageUrl = `/${image}`
 
 
-
-    const handleRedirect = () => {
-        if (typeof window !== 'undefined') {
-            //window.open(githubLink, '_blank', 'noopener,noreferrer');
-        }
-    }
     return (
-        <div className="bg-gray-200 p-6 w-full rounded-xl dark:bg-gray-700">
+        <div className="bg-gray-200 p-6 w-full rounded-xl dark:bg-gray-700 shadow-md/15">
             <header className="mb-3 flex items-center justify-center max-w-full">
                 <Image src={`${banner}`} width={1024} height={1024} alt={`${title}`} className="w-full overflow-clip rounded-2xl"/>
             </header>
