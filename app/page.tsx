@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import Header from "./Components/Header";
 import ProjectHeadline from "./Components/ProjectHeadline";
@@ -7,7 +9,18 @@ import Introduction from "./Sections/Introduction/Introduction";
 import TechnicalSkills from "./Sections/TechnicalSkills/TechnicalSkills";
 import FeaturedProjects from "./Sections/FeaturedProjects/FeaturedProjects";
 
+import { useRef } from "react";
+
 export default function Home() {
+
+  const introRef = useRef(null);
+  const projectRef = useRef(null);
+  const techRef = useRef(null);
+
+  const handleScroll = () => {
+
+  }
+
   return (
     <div className=" font-dm-sans">
 
@@ -23,7 +36,7 @@ export default function Home() {
           <header className="w-full h-16 flex items-center p-6">
             <p className="font-bold select-none text-2xl">Aidan Tang</p>
             <div className="flex-grow"/>
-            <button>test</button>
+            <button></button>
 
           </header>
 
@@ -34,12 +47,25 @@ export default function Home() {
             <div className="w-full h-0.5 bg-white mb-2"/>
             <p>Software Development / Computer Science Student</p>
 
+
+
             <div className="mb-12"/>
 
             <div className="flex flex-col gap-3">
-              <HeroButton text="Introduction"/>
-              <HeroButton text="Technical Skills"/>
-              <HeroButton text="Personal Projects"/>
+
+              <button 
+              onClick={() => {introRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
+              className="border-2 rounded-2xl text-white px-9 py-px transition ease-in-out hover:bg-white hover:text-black hover:scale-102 hover:cursor-pointer">Introduction</button>
+
+              <button 
+              onClick={() => {projectRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
+              className="border-2 rounded-2xl text-white px-9 py-px transition ease-in-out hover:bg-white hover:text-black hover:scale-102 hover:cursor-pointer">Projects</button>
+              
+              <button 
+              onClick={() => {techRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
+              className="border-2 rounded-2xl text-white px-9 py-px transition ease-in-out hover:bg-white hover:text-black hover:scale-102 hover:cursor-pointer">Technical Skills</button>
+              
+   
               
 
 
@@ -61,10 +87,17 @@ export default function Home() {
 
 
       <main className="w-full flex items-center justify-center">
-        <div className="w-300 bg-gray-100 dark:bg-gray-900 p-6 flex flex-col gap-12">
+        <div className="w-300 bg-gray-100 dark:bg-gray-900 p-12 flex flex-col gap-12">
+
+          <div ref={introRef}/>
           <Introduction/>
-          <TechnicalSkills/>
+          
+          <div ref={projectRef}/>
           <FeaturedProjects/>
+
+          <div ref={techRef}/>
+          <TechnicalSkills/>
+          
 
 
         </div>

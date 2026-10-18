@@ -6,10 +6,15 @@ export default function TechnicalSkills() {
               <section className="">
                 <Header text="Technical Skills"/>
                 <p className="max-w-192 mb-6"> The following is my list of technical skills, or tools/frameworks I am familiar with. As an avid learner, I am always welcome to expanding my skillset with new, upcoming ideas!</p>
+
+                <BulletList
+                title="Paradigms"
+                items={["Full-Stack Web Development", "Mobile Development"]}
+                />
         
                 <BulletList 
                 title="Programming Languages"
-                items={["JavaScript / TypeScript", "Java", "SQL", "Python", "Swift", "Kotlin", "C", "C++", "RISC-V Assembly", "HTML / CSS"]}
+                items={["HTML / CSS", "JavaScript / TypeScript", "Java", "SQL", "Python", "Swift", "Kotlin", "C", "C++", "RISC-V Assembly"]}
                 />
         
                 <BulletList
@@ -25,6 +30,11 @@ export default function TechnicalSkills() {
                 <BulletList
                 title="Concepts"
                 items={["Agile/Scrum", "Object-Oriented Programming (OOP)"]}
+                />
+
+                <BulletList
+                title="Relevant Coursework"
+                items={["EECS 2031: Software Tools (Unix, C)", "EECS 2021: Computer Organization (Assembly)", "EECS 2101: Data Structures & Algorithms", "EECS 3221: Operating Systems", "EECS 3421: Database Systems"]}
                 />
         
         
