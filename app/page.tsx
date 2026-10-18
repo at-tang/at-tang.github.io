@@ -32,7 +32,7 @@ export default function Home() {
 
 
 
-        <div className="w-full h-dvh inset-0 bg-black/50 relative z-20 flex flex-col justify-center items-center">
+        <div className="w-full h-dvh inset-0 bg-black/30 relative z-20 flex flex-col justify-center items-center">
           <header className="w-full h-16 flex items-center p-6">
             <p className="font-bold select-none text-2xl">Aidan Tang</p>
             <div className="flex-grow"/>
@@ -86,8 +86,8 @@ export default function Home() {
       </section>
 
 
-      <main className="w-full flex items-center justify-center">
-        <div className="w-300 bg-gray-100 dark:bg-gray-900 p-12 flex flex-col gap-12">
+      <main className="w-full flex items-center justify-center dark:bg-gray-900">
+        <div className="w-300 bg-gray-100 dark:bg-gray-900 p-12 flex flex-col gap-12 rounded-4xl">
 
           <div ref={introRef}/>
           <Introduction/>

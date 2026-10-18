@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Button from "./Button"
+import ProjectButtonLink from "./ProjectButtonLink"
 
 
 export default function ProjectHeadline({title, subtitle, description, image, githubLink, techStack, banner, detailLink}: {
@@ -44,9 +45,10 @@ export default function ProjectHeadline({title, subtitle, description, image, gi
                     
                     <p className="md:mr-16 mb-6">{description}</p>
 
-                    <div className="flex gap-3">
-                        <Button text="GitHub Repository" callback={handleRedirect}/>
-                        {detailLink && <Button text="See More"/>}
+                    <div className="flex gap-3 justify-center md:justify-start">
+
+                        <ProjectButtonLink link={githubLink} text="GitHub Repository"/>
+                        {detailLink && <ProjectButtonLink link={detailLink} text="See More"/>}
                     </div>
 
                     
