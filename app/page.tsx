@@ -13,13 +13,10 @@ import { useRef } from "react";
 
 export default function Home() {
 
-  const introRef = useRef(null);
-  const projectRef = useRef(null);
-  const techRef = useRef(null);
+  const introRef = useRef<HTMLDivElement>(null);
+  const projectRef = useRef<HTMLDivElement>(null);
+  const techRef = useRef<HTMLDivElement>(null);
 
-  const handleScroll = () => {
-
-  }
 
   return (
     <div className=" font-dm-sans">
@@ -54,15 +51,15 @@ export default function Home() {
             <div className="flex flex-col gap-3">
 
               <button 
-              onClick={() => {introRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
+              onClick={() => {introRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
               className="border-2 rounded-2xl text-white px-9 py-px transition ease-in-out hover:bg-white hover:text-black hover:scale-102 hover:cursor-pointer">Introduction</button>
 
               <button 
-              onClick={() => {projectRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
+              onClick={() => {projectRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
               className="border-2 rounded-2xl text-white px-9 py-px transition ease-in-out hover:bg-white hover:text-black hover:scale-102 hover:cursor-pointer">Projects</button>
               
               <button 
-              onClick={() => {techRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
+              onClick={() => {techRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
               className="border-2 rounded-2xl text-white px-9 py-px transition ease-in-out hover:bg-white hover:text-black hover:scale-102 hover:cursor-pointer">Technical Skills</button>
               
    
