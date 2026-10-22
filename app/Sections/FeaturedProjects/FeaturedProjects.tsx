@@ -33,7 +33,7 @@ export default function FeaturedProjects() {
           subtitle="Quiz-themed Social Media Platform, Full-Stack Web Application"
           techStack="JavaScript / TypeScript, React, Next.js, Spring Boot, SQL, PostgreSQL, Spring Security"
           description="A full-stack web application enablings users to create, edit, share, and play user-generated quizzes."
-          image="swiftappicon.png"
+          image="WebTestmakerLogoBlack.png"
           banner="WebTestmakerBanner.jpg"
           githubLink="https://github.com/at-tang/web-testmaker"
           />          
