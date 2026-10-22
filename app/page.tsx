@@ -30,7 +30,7 @@ export default function Home() {
 
       <section className=" h-100dvh w-full bg-gray-800 text-white">
         
-        <div className="inset-0 absolute w-full h-full bg-fixed bg-cover bg-center brightness-75 z-10 bg-[url(/paris.jpg)]"/>
+        <div className="inset-0 absolute w-full h-full bg-cover bg-center brightness-75 z-10 bg-[url(/paris.webp)]"/>
 
 
 
